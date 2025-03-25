@@ -1,11 +1,12 @@
 import { StyleSheet } from "react-native";
+import { colors } from "../src/utils/colors";
  
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
     padding: 24,
-    backgroundColor: "#FFF",
+    backgroundColor: colors.white,
     flexDirection: "column",
     justifyContent: "center",
     height: "100%",
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   innerTitle: {
-    color: "#FCA34D",
+    color: colors.orange,
     textDecorationLine: "underline",
   },
   titleContainer: {
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
   },
   signUpText: {
     textAlign: "center",
-    color: "#4F63AC",
+    color: colors.blue,
     fontSize: 16,
     fontWeight: "bold",
     marginTop: 30,

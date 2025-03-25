@@ -1,7 +1,7 @@
 import { TouchableOpacity, Text } from "react-native";
 import styles from "./style";
 
-const Button = ({ title, onPress }: { title: string, onPress: () => void }) => {
+const Button = ({ title, onPress }: { title: string,   onPress: () => void }) => {
 
   return (
     <TouchableOpacity style={styles.container} activeOpacity={0.6} onPress={onPress}>
