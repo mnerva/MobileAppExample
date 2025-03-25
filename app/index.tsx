@@ -1,5 +1,6 @@
-import { Text, View, Image } from "react-native";
+import { Text, View, Image, TouchableOpacity } from "react-native";
 import styles from "./style";
+import Button from "../src/components/Button";
 
 export default function SplashScreen() {
   return (
@@ -8,9 +9,17 @@ export default function SplashScreen() {
         source={require("../src/assets/images/splash-image.png")}
         style={styles.image}
       />
-      <Text style={styles.title}>You'll Find</Text>
-      <Text style={[styles.title, styles.innerTitle]}>All you need</Text>
-      <Text style={styles.title}>Heree!</Text>
+      <View style={styles.titleContainer}>
+         <Text style={styles.title}>You'll Find</Text>
+         <Text style={[styles.title, styles.innerTitle]}>All you need</Text>
+         <Text style={styles.title}>Here!</Text>
+       </View>
+ 
+       <Button title="Sign In" onPress={() => {}} />
+ 
+       <TouchableOpacity onPress={() => {}}>
+         <Text style={styles.signUpText}>Sign Up</Text>
+       </TouchableOpacity>
     </View>
   );
 }
