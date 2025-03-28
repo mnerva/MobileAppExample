@@ -5,7 +5,8 @@ import Input from "../../components/Input";
 import Checkbox from "../../components/Checkbox"
 import { router } from "expo-router";
 import { useState } from "react";
-import Button from "../../components/Button"
+import Button from "../../components/Button";
+import Separator from "../../components/Separator";
 
 const Signup = () => {
   const [checked, setChecked] = useState(false)
@@ -25,6 +26,7 @@ const Signup = () => {
         <Text style={styles.agreeText}>I agree with <Text style={styles.agreeTextBold}>Terms & Privacy</Text></Text>
       </View>
       <Button style={styles.button} title="Sign In" onPress={() => {}} />
+      <Separator text='Or sign up with' />
     </View>
   );
 };
