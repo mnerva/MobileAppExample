@@ -5,7 +5,7 @@ import { View, TouchableOpacity, Image, Text } from "react-native";
    return (
      <View style={styles.container}>
        <TouchableOpacity onPress={onBackPress}>
-         <Image style={styles.backIcon} source={require("../../assets/images/auth_back.png")} />
+         <Image style={styles.backIcon} source={require("../../assets/images/back.png")} />
        </TouchableOpacity>
        <Text style={styles.title}>{title}</Text>
      </View>

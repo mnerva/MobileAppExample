@@ -2,12 +2,16 @@ import { View, Text, SafeAreaView, FlatList } from "react-native";
 import styles from "./style";
 import Header from "../../components/Header"
 import FavoriteItem from "../../components/FavoriteItem";
-import products from "../../utils/products";
+import { products } from "../../utils/products";
 
 export default function Favorites() {
     const renderItem = ({item}: {item: any}) => {
+      const onProductPress = () => {
+        NavigationActivation.navigate('ProductDetails', {product: item})
+      }
+
       return (
-          <FavoriteItem item={item} />
+          <FavoriteItem onPress={onProductPress} {...item} />
       )
     }
     return (

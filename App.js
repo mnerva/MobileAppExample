@@ -2,13 +2,14 @@ import React, { useEffect } from 'react';
 
 import { Image } from 'react-native';
 
-import Splash from './src/screens/auth/Splash';
-import Signup from './src/screens/auth/Signup';
-import Signin from './src/screens/auth/Signin';
+import Splash from './auth/index';
+import Signup from '/auth/Signup';
+import Signin from './auth/Signin';
 
-import Home from './src/screens/app/Home';
-import Favorites from './src/screens/app/Favorites';
-import Profile from './src/screens/app/Profile';
+import Home from './app/Home';
+import Favorites from './app/Favorites';
+import Profile from './app/Profile';
+import ProductDetails from './app/ProductDetails'
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -88,6 +89,7 @@ const App = () => {
           isSignedIn ? (
             <>
               <Stack.Screen name="Tabs" component={Tabs} options={{headerShown: false}}/>
+              <Stack.Screen name="ProductDetails" component={ProductDetails} options={{headerShown: false}}/>
             </>
           ) : (
             <>
