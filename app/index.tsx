@@ -21,8 +21,8 @@ export default function SplashScreen() {
          <Text style={[styles.title, styles.innerTitle]}>All you need</Text>
          <Text style={styles.title}>Here!</Text>
        </View>
- 
-       <Button title="Sign In" onPress={handleSignUp} />
+       
+       <Button style={styles.button} title="Sign In" onPress={handleSignUp} />
  
        <TouchableOpacity onPress={handleSignUp}>
          <Text style={styles.signUpText}>Sign Up</Text>

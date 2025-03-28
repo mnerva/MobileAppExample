@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import { colors } from "../../utils/colors"
+import Button from "@/src/components/Button";
 
 const styles = StyleSheet.create({
   container: {
@@ -15,6 +16,9 @@ const styles = StyleSheet.create({
   },
   agreeTextBold: {
     fontWeight: 'bold',
+  },
+  button: {
+    marginVertical: 20,
   },
 });
 
