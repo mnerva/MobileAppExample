@@ -1,8 +1,19 @@
 import { Text, View, Image, TouchableOpacity } from "react-native";
 import styles from "./style";
 import Button from "../src/components/Button";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
 
-export default function SplashScreen() {
+export default function SplashScreen() { 
+  const navigation = useNavigation<NavigationProp<any>>();
+  
+  const handleSignUp = () => {
+    navigation.navigate("signup");
+  };
+
+  const handleSignIn = () => {
+    navigation.navigate("signin");
+  };
+
   return (
     <View style={styles.container}>
       <Image
@@ -14,10 +25,10 @@ export default function SplashScreen() {
          <Text style={[styles.title, styles.innerTitle]}>All you need</Text>
          <Text style={styles.title}>Here!</Text>
        </View>
+       
+       <Button style={styles.button} title="Sign In" onPress={handleSignIn} />
  
-       <Button title="Sign In" onPress={() => {}} />
- 
-       <TouchableOpacity onPress={() => {}}>
+       <TouchableOpacity onPress={handleSignUp}>
          <Text style={styles.signUpText}>Sign Up</Text>
        </TouchableOpacity>
     </View>

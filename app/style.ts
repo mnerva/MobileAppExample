@@ -36,7 +36,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     marginTop: 30,
-  }
+  },
+  button: {
+    marginVertical: 20,
+  },
 });
  
 export default styles;
