@@ -1,18 +1,18 @@
 import { Text, View, Image, TouchableOpacity } from "react-native";
 import styles from "./style";
 import Button from "../src/components/Button";
-import { NavigationProp, useNavigation } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 
-export default function SplashScreen() { 
-  const navigation = useNavigation<NavigationProp<any>>();
-  
+export default function SplashScreen() {
+  const navigation = useNavigation();
+
   const handleSignUp = () => {
-    navigation.navigate("signup");
+    navigation.navigate("Signup" as never);
   };
 
   const handleSignIn = () => {
-    navigation.navigate("signin");
-  };
+    navigation.navigate("Signin" as never);
+  }
 
   return (
     <View style={styles.container}>
@@ -21,16 +21,16 @@ export default function SplashScreen() {
         style={styles.image}
       />
       <View style={styles.titleContainer}>
-         <Text style={styles.title}>You'll Find</Text>
-         <Text style={[styles.title, styles.innerTitle]}>All you need</Text>
-         <Text style={styles.title}>Here!</Text>
-       </View>
-       
-       <Button style={styles.button} title="Sign In" onPress={handleSignIn} />
- 
-       <TouchableOpacity onPress={handleSignUp}>
-         <Text style={styles.signUpText}>Sign Up</Text>
-       </TouchableOpacity>
+        <Text style={styles.title}>You'll Find</Text>
+        <Text style={[styles.title, styles.innerTitle]}>All you need</Text>
+        <Text style={styles.title}>Here!</Text>
+      </View>
+
+      <Button title="Sign In" onPress={handleSignIn} />
+
+      <TouchableOpacity onPress={handleSignUp}>
+        <Text style={styles.signUpText}>Sign Up</Text>
+      </TouchableOpacity>
     </View>
   );
 }

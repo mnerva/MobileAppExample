@@ -1,4 +1,5 @@
 package com.anonymous.MobileAppExample
+import android.os.Bundle
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build

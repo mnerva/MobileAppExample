@@ -1,19 +1,20 @@
-import { useNavigation } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useEffect } from 'react';
-import { Stack } from 'expo-router';
- 
+import SplashScreen from './index';
+import Signin from '../src/screens/Signin'
+import Signup from '../src/screens/Signup';
+import { SafeAreaView } from 'react-native';
+
+const Stack = createNativeStackNavigator();
+
 export default function Layout() {
-  const navigation = useNavigation();
-
-  useEffect(() => {
-    console.log(navigation.getState());
-  }, [navigation]);
-
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-      <Stack.Screen name="signup" options={{ headerShown: false }} />
-      <Stack.Screen name="signin" options={{ headerShown: false }} />
-    </Stack>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
+      <Stack.Navigator>
+        <Stack.Screen name="index" component={SplashScreen} options={{ headerShown: false }}/>
+        <Stack.Screen name="Signin" component={Signin} options={{ headerShown: false }}/>
+        <Stack.Screen name="Signup" component={Signup} options={{ headerShown: false }}/>
+      </Stack.Navigator>
+    </SafeAreaView>
   );
 }
