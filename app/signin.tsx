@@ -1,3 +1,3 @@
-import Signin from '../src/screens/Signin';
+import Signin from './auth/Signin';
 
 export default Signin;

@@ -1,12 +1,12 @@
 import { View, Text, TouchableOpacity, SafeAreaView } from "react-native";
 import styles from "./style";
-import Header from "../../components/AuthHeader";
-import Input from "../../components/Input";
-import Checkbox from "../../components/Checkbox"
+import Header from "../../../components/AuthHeader";
+import Input from "../../../components/Input";
+import Checkbox from "../../../components/Checkbox"
 import { useState } from "react";
-import Button from "../../components/Button";
-import Separator from "../../components/Separator";
-import GoogleLogin from "@/src/components/GoogleLogin";
+import Button from "../../../components/Button";
+import Separator from "../../../components/Separator";
+import GoogleLogin from "@/components/GoogleLogin";
 import { useNavigation } from "@react-navigation/native";
 
 const Signup = () => {

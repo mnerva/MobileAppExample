@@ -1,10 +1,10 @@
 import { View, Text, TouchableOpacity, SafeAreaView } from "react-native";
 import styles from "./style";
-import Header from "../../components/AuthHeader";
-import Input from "../../components/Input";
-import Separator from "../../components/Separator";
-import Button from "../../components/Button";
-import GoogleLogin from "../../components/GoogleLogin";
+import Header from "../../../components/AuthHeader";
+import Input from "../../../components/Input";
+import Separator from "../../../components/Separator";
+import Button from "../../../components/Button";
+import GoogleLogin from "../../../components/GoogleLogin";
 import { useNavigation } from "@react-navigation/native";
 
 const Signin = () => {
