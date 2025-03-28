@@ -37,11 +37,12 @@ export default function Home() {
         )
     }
 
-    const renderProductItem = (item: any, index: number) => {
+    const renderProductItem = ({item}) => {
+        const onProductPress = (product) => {
+          navigation.navigate('ProductDetails', {product})
+        }
         return (
-            <ProductHomeItem {...item}
-            onPress={() => setSelectedProducts([...selectedProducts, item.id])}
-            isSelected={selectedProducts.includes(item.id)}/>
+            <ProductHomeItem onPress={() => onProductPress(item)} {...item} />
         )
     }
 

@@ -15,7 +15,7 @@ const Header = ({ title, onBackPress, onLogout, onSearchKeyword, keyword, showBa
       <View style={styles.container}>
         { showBack ? (
           <TouchableOpacity onPress={onBackPress}>
-          <Image style={styles.Icon} source={require("../../assets/images/auth_back.png")} />
+          <Image style={styles.Icon} source={require("../../assets/images/back.png")} />
         </TouchableOpacity>
       ) : showSearch ? (
         <TouchableOpacity onPress={onSearch}>
