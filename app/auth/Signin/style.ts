@@ -1,6 +1,5 @@
+import { colors } from "../../../utils/colors";
 import { StyleSheet } from "react-native";
-import { colors } from "../../utils/colors"
-import Button from "@/src/components/Button";
 
 const styles = StyleSheet.create({
   container: {
@@ -20,14 +19,21 @@ const styles = StyleSheet.create({
   button: {
     marginVertical: 20,
   },
+  footerContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 56,
+  },
   footerText: {
     color: colors.blue,
-    marginBottom: 56,
     textAlign: 'center',
   },
   footerLink: {
-    fontWeight: 'bold'
-  },
+    color: colors.blue,
+    fontWeight: 'bold',
+    marginLeft: 4,
+  }
 });
 
 export default styles;

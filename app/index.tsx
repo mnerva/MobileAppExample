@@ -1,36 +1,46 @@
-import { Text, View, Image, TouchableOpacity } from "react-native";
+import { Text, View, Image, TouchableOpacity, SafeAreaView } from "react-native";
 import styles from "./style";
-import Button from "../src/components/Button";
-import { NavigationProp, useNavigation } from "@react-navigation/native";
+import Button from "../components/Button";
+import { useNavigation } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Home from "./Home";
+import Favorites from "./Favorites";
+import Profile from "./Profile";
+import { useState } from "react";
+import Splash from "./auth/index";
+import { Ionicons } from '@expo/vector-icons';
 
-export default function SplashScreen() { 
-  const navigation = useNavigation<NavigationProp<any>>();
-  
-  const handleSignUp = () => {
-    navigation.navigate("signup");
-  };
+const Tab = createBottomTabNavigator()
 
-  const handleSignIn = () => {
-    navigation.navigate("signin");
-  };
-
+const Tabs = () => {
   return (
-    <View style={styles.container}>
-      <Image
-        source={require("../src/assets/images/splash-image.png")}
-        style={styles.image}
-      />
-      <View style={styles.titleContainer}>
-         <Text style={styles.title}>You'll Find</Text>
-         <Text style={[styles.title, styles.innerTitle]}>All you need</Text>
-         <Text style={styles.title}>Here!</Text>
-       </View>
-       
-       <Button style={styles.button} title="Sign In" onPress={handleSignIn} />
- 
-       <TouchableOpacity onPress={handleSignUp}>
-         <Text style={styles.signUpText}>Sign Up</Text>
-       </TouchableOpacity>
-    </View>
-  );
+    <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName: keyof typeof Ionicons.glyphMap;
+
+            if (route.name === 'Home') {
+              iconName = focused ? 'home' : 'home-outline';
+            } else if (route.name === 'Favorites') {
+              iconName = focused ? 'heart' : 'heart-outline';
+            } else if (route.name === 'Profile') {
+              iconName = focused ? 'person' : 'person-outline';
+            } else {
+              iconName = 'home-outline';
+            }
+
+            return <Ionicons name={iconName} size={size} color={color} />;
+          },
+          tabBarActiveTintColor: '#007AFF',
+          tabBarInactiveTintColor: 'gray',
+          headerShown: false
+        })}
+      >
+        <Tab.Screen name='Home' component={Home} />
+        <Tab.Screen name='Favorites' component={Favorites} />
+        <Tab.Screen name='Profile' component={Profile} />
+      </Tab.Navigator>
+    </SafeAreaView>
+  )
 }
