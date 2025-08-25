@@ -1,7 +1,6 @@
-import { TouchableOpacity, Text, ViewStyle } from "react-native";
+import { TouchableOpacity, Text, ViewStyle  } from "react-native";
 import styles from "./style";
-import { colors } from "../../utils/colors";
-
+import { colors } from "@/utils/colour";
 const Button = ({ title, onPress, style, color = colors.white }: { title: string, onPress?: () => void, style?: ViewStyle, color?: string }) => {
 
   return (
@@ -11,4 +10,4 @@ const Button = ({ title, onPress, style, color = colors.white }: { title: string
   );
 };
 
-export default Button; 
+export default Button;  

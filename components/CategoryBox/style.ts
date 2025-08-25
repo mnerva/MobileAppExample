@@ -1,10 +1,10 @@
-import { colors } from "../../utils/colors";
+import { colors } from "@/utils/colour";
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: 8,
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
   },

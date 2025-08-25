@@ -1,17 +1,17 @@
+import { colors } from "@/utils/colour";
 import { StyleSheet, Dimensions } from "react-native";
 
-import {colors} from '../../utils/colors'
-const {width, height} = Dimensions.get('window')
+const { width, height } = Dimensions.get('window');
 
-export const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   image: {
     width: width,
-    height: height * 0.45
+    height: height * 0.45,
   },
   list: {
-
+    marginTop: 16,
   },
-  paggination: {
+  pagination: {
     flexDirection: 'row',
     alignItems: 'center',
     position: 'absolute',
@@ -19,14 +19,16 @@ export const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   pagginationLine: {
-    height: 4,
     width: 20,
+    height: 4,
     borderRadius: 10,
     backgroundColor: colors.white,
-    margin: 5
+    margin: 5,
   },
   activeLine: {
     backgroundColor: colors.black,
-    width: 30
-  }
-})
+    width: 30,
+  },
+});
+
+export default styles;

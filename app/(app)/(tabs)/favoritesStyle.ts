@@ -7,6 +7,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     padding: 24,
   },
+  listContent: {
+    padding: 24,
+  }
 });
 
 export default styles;
