@@ -16,6 +16,8 @@ This is an [Expo](https://expo.dev) React Native project created with [`create-e
 
    ```bash
    npm install
+   nvm use
+   npm ci
    ```
 
 2. **Start the app**
